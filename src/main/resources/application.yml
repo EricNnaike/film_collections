@@ -1,0 +1,28 @@
+logging:
+    level:
+        org:
+            hibernate:
+                SQL: DEBUG
+                type: TRACE
+server:
+    port: 9001
+spring:
+    datasource:
+        password: 1234
+        url: jdbc:postgresql://localhost:5432/film_db
+        username: postgres
+    jpa:
+        hibernate:
+            ddl-auto: update
+            naming:
+                implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyJpaCompliantImpl
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.PostgreSQL94Dialect
+                format_sql: true
+        show-sql: false
+    main:
+        allow-circular-references: true
+        spring:
+            liquibase:
+                change-log: classpath:/db/changelog-master.yaml
