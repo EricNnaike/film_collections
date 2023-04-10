@@ -13,7 +13,6 @@ public interface UserService {
     Users create(UserDTO userDTO);
     LoginResponse login(LoginDTO loginDTO);
     List<FilmsResponse> retrieveAndSaveMovies();
-//    List<Films> retrieveAndSaveMovies();
     List<Films> retrieveAllMovies(Long id);
     SearchResponse searchMoviesByName(String keyword);
     RatingResponse rateMovie(Long movieId, Long userId, RateDTO rateDTO);
